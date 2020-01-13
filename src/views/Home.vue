@@ -217,7 +217,8 @@ export default {
       let s1 = new Date(window.localStorage.loginTime);
       let s2 = new Date(this.getNowTime());
       let s3 = s2.getTime() - s1.getTime();
-      if(s3 > 86400000){
+      console.log(s3)
+      if(s3 > 10800){
         window.localStorage.removeItem('admin');
         window.localStorage.removeItem('loginTime');
       }
